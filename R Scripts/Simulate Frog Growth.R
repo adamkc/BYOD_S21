@@ -4,9 +4,6 @@ n=200 #number of frogs
 tmax=1500 #number of days of growth
 r=0.04 #daily growth rate
 r_sd=0.2 #sd of daily growth rate
-#beta distribution:
-r_shape1 = 2
-r_shape2 = 1
 start=5 #starting weight
 
 pop = matrix(nrow=n,ncol=tmax,data = NA)
@@ -16,7 +13,6 @@ pop[,1] <- start
 for(i in 2:tmax){
   pop[,i] <- sapply(pop[,i-1],FUN = function(x) {
     x + (r + rnorm(n = 1,mean = 0,sd = r_sd)) #Normal
-    #x + (r * rbeta(n = 1,shape1 = r_shape1,shape2 = r_shape2)) #beta
   })
 }
 
