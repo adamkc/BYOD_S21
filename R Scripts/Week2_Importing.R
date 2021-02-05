@@ -4,7 +4,7 @@
 
 # Base R: ------------------------------
 
-childs <- read.csv("F:/Adam Cummings/BYOD_S21/Orginal Data/Childs_2020_Habitat.csv")
+childs <- read.csv("Orginal Data/Childs_2020_Habitat.csv")
 
 covidData <- read.csv('https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv')
 
@@ -24,7 +24,7 @@ library(readxl) # used to read excel files
 
 ## Add Code:
 
-readxl::read_excel("excel.xls")
+readxl::read_excel("example.xls")
 
 
 # Custom functions: ----------------------
