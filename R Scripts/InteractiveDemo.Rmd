@@ -1,0 +1,22 @@
+---
+title: "Interactive Document"
+author: "Adam Cummings"
+date: "10/19/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(leaflet)
+library(dplyr)
+```
+
+```{r}
+data <- data.frame(lng = c(-124.073,-124.071),
+                   lat = c(40.873,40.871),
+                   popup = c("test1","test2"))
+leaflet() %>% setView(lng= -124.073,lat=40.873,zoom=13) %>%
+  addTiles() %>%
+  addMarkers(lng = data$lng,
+             lat=data$lat,
+             popup=data$popup)
+```
